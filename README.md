@@ -22,5 +22,5 @@ create, Controller thực hiện phương thức Get với link .. để show ra
 Controller sẽ nhận đc product với đầy đủ thông tin. Controller đưa nó cho Service rồi tới Repository để lưu vào db
 * Chức năng xóa sản phẩm Delete/Confirm Delete Product (View, Controller, Repository, Service):Cách Controller lấy được mã code tương
 tự vs luồng của edit. Controller lấy được mã code, gọi tới Service và Repository để lấy product theo code từ trong db và hiển thị ra view.
-Khi nhấn xác nhận delele, mã code lại được truyền về C, S,Vđể xoá product trong db theo code.
+Khi nhấn xác nhận delele, mã code lại được truyền về C, S,V để xoá product trong db theo code.
 
