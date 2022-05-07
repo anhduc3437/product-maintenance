@@ -8,4 +8,5 @@ public interface ProductRepository extends JpaRepository<Product, String> {
 	List<Product> findAll();
 	Product findByCode(String code);
 	Product save(Product product);
+	void deleteByCode(String code);
 }

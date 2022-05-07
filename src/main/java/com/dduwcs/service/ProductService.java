@@ -9,4 +9,5 @@ public interface ProductService extends Service {
     void save(Product product);
 //    void update(Product product);
     Product find(String code);
+    void delete(String code);
 }

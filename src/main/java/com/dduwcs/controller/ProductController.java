@@ -55,4 +55,19 @@ public class ProductController {
 		this.productServiceImplement.save(product);
 		return "redirect:/productMaint1/displayProducts";
 	}
+	
+	@GetMapping("/confirm")
+	public String confirm(@RequestParam String code, Model model) {
+		Product product = this.productServiceImplement.find(code);
+		model.addAttribute("product", product);
+		return "confirm";
+	}
+	
+	@GetMapping("/delete")
+	public String delete(@RequestParam String code, Model model) {
+		this.productServiceImplement.delete(code);
+		return "redirect:/productMaint1/displayProducts";
+	}
+	
+	
 }

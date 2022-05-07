@@ -3,6 +3,7 @@ package com.dduwcs.service;
 import com.dduwcs.model.Product;
 import com.dduwcs.repository.ProductRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -28,7 +29,8 @@ public class ProductServiceImplement implements ProductService {
     	this.productRepository.save(product);
     }
     
-//    public void update(Product product) {
-//    	this.productRepository.update(product);
-//    }
+    @Transactional
+    public void delete(String code) {
+    	this.productRepository.deleteByCode(code);
+    }
 }
