@@ -20,7 +20,15 @@ public class ProductServiceImplement implements ProductService {
         return this.productRepository.findAll();
     }
     
+    public Product find(String code) {
+    	return this.productRepository.findByCode(code);
+    }
+    
     public void save(Product product) {
     	this.productRepository.save(product);
     }
+    
+//    public void update(Product product) {
+//    	this.productRepository.update(product);
+//    }
 }

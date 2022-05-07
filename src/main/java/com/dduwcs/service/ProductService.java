@@ -7,4 +7,6 @@ import java.util.List;
 public interface ProductService extends Service {
     List<Product> getProducts();
     void save(Product product);
+//    void update(Product product);
+    Product find(String code);
 }

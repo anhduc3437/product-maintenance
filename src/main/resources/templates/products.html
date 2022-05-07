@@ -10,11 +10,15 @@
             <th>Code</th>
             <th>Description</th>
             <th>Price</th>
+            <th>Action</th>
         </tr>
         <tr th:each="product : ${products}">
             <td><span th:text="${product.code}"> Code </span></td>
             <td><span th:text="${product.description}"> Description </span></td>
             <td><span th:text="${product.price}"> Price </span></td>
+            <td><a th:href="@{/productMaint1/update?code=} + ${product.code}">Edit</a>
+            	<a th:href="@{/productMaint1/delete}">Delete</a></td>
+
         </tr>
     </table>
     <a th:href="@{/productMaint1/add}">Add Product</a>
