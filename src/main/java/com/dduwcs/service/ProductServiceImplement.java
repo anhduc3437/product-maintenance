@@ -19,4 +19,8 @@ public class ProductServiceImplement implements ProductService {
 
         return this.productRepository.findAll();
     }
+    
+    public void save(Product product) {
+    	this.productRepository.save(product);
+    }
 }

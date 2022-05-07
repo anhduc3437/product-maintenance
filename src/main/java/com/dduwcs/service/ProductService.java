@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ProductService extends Service {
     List<Product> getProducts();
+    void save(Product product);
 }
